@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="500dp"><![CDATA[
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    ]]>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/ed"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_below="@+id/textView7"
+        android:layout_marginRight="75dp"
+        android:layout_marginLeft="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Endereço:"
+        android:id="@+id/textView7"
+        android:layout_marginTop="30dp" />
+
+    <android.support.design.widget.FloatingActionButton
+          android:id="@+id/fab"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="right"
+          android:src="@mipmap/current"
+
+          app:elevation="6dp"
+          app:pressedTranslationZ="12dp"
+        android:layout_alignBottom="@+id/ed"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Foco"
+        android:textStyle="bold"
+        android:id="@+id/button2"
+        android:background="#00ffffff"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:onClick="ADICIONARFOCO"
+        android:layout_below="@+id/ed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp" />
+
+    <!-- <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/imageButton"
+        android:background="@drawable/oval"
+        android:elevation="10dp"
+        android:src="@mipmap/current"
+       android:fabSize="mini"
+        android:layout_alignTop="@+id/editText7"
+        android:layout_alignRight="@+id/RG"
+        android:layout_alignEnd="@+id/RG" />-->
+
+
+</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

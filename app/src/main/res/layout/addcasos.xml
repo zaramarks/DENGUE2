@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* Nome Completo:"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:id="@+id/nomep"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="14dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NomeP"
+        android:hint="Ex: Maria Aquino"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doença:"
+        android:textSize="17sp"
+        android:textColor="#000"
+        android:id="@+id/tdoencap"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="14dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_marginLeft="14dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço:"
+        android:textSize="17sp"
+        android:textColor="#000"
+        android:id="@+id/enderecop"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="14dp" />
+
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/endereço"
+        android:hint="Ex: Rua Aedes, 259"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar casos de pacientes que possuem Dengue, Zika vírus ou Chicungunya. Preencher todos os campos"
+        android:textSize="10dp"
+        android:id="@+id/bla"
+        android:layout_marginLeft="14dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Registrar Caso"
+        android:id="@+id/Registrar"
+        android:onClick="PinarMapa"
+        android:background="@color/colorAccent"
+        android:textColor="#fff"
+        android:layout_gravity="right"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="10dp" />
+
+
+</LinearLayout>
