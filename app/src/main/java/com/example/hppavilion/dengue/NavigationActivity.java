@@ -10,14 +10,11 @@ import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-
-import android.os.Bundle;
-
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -30,22 +27,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.example.hppavilion.dengue.adapter.AddAdapter;
 import com.example.hppavilion.dengue.adapter.CasoAdapter;
 import com.example.hppavilion.dengue.adapter.ItemSlideMenu;
-import com.example.hppavilion.dengue.fragmentos.Configuracao;
-import com.example.hppavilion.dengue.fragmentos.Mapa;
 import com.example.hppavilion.dengue.fragmentos.AddCasos;
-import com.example.hppavilion.dengue.fragmentos.Informacoes;
 import com.example.hppavilion.dengue.fragmentos.CasosAdicionados;
-//import com.example.hppavilion.dengue.model.BancoDeDados2;
+import com.example.hppavilion.dengue.fragmentos.Configuracao;
+import com.example.hppavilion.dengue.fragmentos.Informacoes;
+import com.example.hppavilion.dengue.fragmentos.Mapa;
 import com.example.hppavilion.dengue.fragmentos.Sair;
 import com.example.hppavilion.dengue.fragmentos.addFocos;
 import com.example.hppavilion.dengue.fragmentos.buscar;
@@ -62,17 +56,17 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
-
-import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+//import com.example.hppavilion.dengue.adapter.AddAdapter;
+//import com.example.hppavilion.dengue.model.BancoDeDados2;
 
 
 public class NavigationActivity extends ActionBarActivity
@@ -83,7 +77,7 @@ public class NavigationActivity extends ActionBarActivity
 
 {
 
-    private static final float DEFAULTZOM =18 ;
+    private static final float DEFAULTZOM = 18;
     private List<ItemSlideMenu> listSliding;
     private CasoAdapter adapter;
     private ListView listViewSliding, LView;
@@ -96,9 +90,9 @@ public class NavigationActivity extends ActionBarActivity
     public SupportMapFragment mFragMap = null;
     public GoogleApiClient mGoogleApiClient = null;
     public String nomeP, doencaP, enderecoP;
-    BancoDeDados helper2= new BancoDeDados(this);
-    private static final double CG_LAT=-20.4435,
-            CG_LGT =-54.6478;
+    BancoDeDados helper2 = new BancoDeDados(this);
+    private static final double CG_LAT = -20.4435,
+            CG_LGT = -54.6478;
 
     public static GoogleMap mMap;
     public GoogleApiClient client;
@@ -107,8 +101,8 @@ public class NavigationActivity extends ActionBarActivity
     public double Plat1;
     public double Plng2;
     public static SearchView sv;
-    public BancoDeDados helper= new BancoDeDados(this);
-    public int valor=0;
+    public BancoDeDados helper = new BancoDeDados(this);
+    public int valor = 0;
     public static String PNOME;
     public static String PSOBRENOME;
     public static String PEMAIL;
@@ -124,9 +118,9 @@ public class NavigationActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_activity);
-        sv=(SearchView)findViewById(R.id.searchView2);
+        sv = (SearchView) findViewById(R.id.searchView2);
 
-        Intent searchIntent=getIntent();
+        Intent searchIntent = getIntent();
         if (Intent.ACTION_SEARCH.equals(searchIntent.getAction())) {
             String query = searchIntent.getStringExtra(SearchManager.QUERY);
             Toast.makeText(NavigationActivity.this, query, Toast.LENGTH_SHORT).show();
@@ -143,7 +137,7 @@ public class NavigationActivity extends ActionBarActivity
         nome = (TextView) findViewById(R.id.NOME);
         email = (TextView) findViewById(R.id.EMAIL);
 
-     //   email.setText(PEMAIL);
+        //   email.setText(PEMAIL);
 
 
         SQLiteDatabase banco = helper.getReadableDatabase();
@@ -157,28 +151,28 @@ public class NavigationActivity extends ActionBarActivity
                 switch (Linguaa) {
                     case "Português":
                         listSliding = new ArrayList<>();
-                        listSliding.add(new ItemSlideMenu( R.drawable.place, "  Mapa "));
+                        listSliding.add(new ItemSlideMenu(R.drawable.place, "  Mapa "));
                         listSliding.add(new ItemSlideMenu(R.drawable.add, "  Adicionar Casos"));
                         listSliding.add(new ItemSlideMenu(R.drawable.add, "  Adicionar Focos"));
                         listSliding.add(new ItemSlideMenu(R.drawable.list, "  Meus Casos Adicionados"));
                         listSliding.add(new ItemSlideMenu(R.drawable.search, "  Buscar Casos"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.info,"  Informações"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.settings,"  Configurações"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.logoff,"  Logout"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.info, "  Informações"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.settings, "  Configurações"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.logoff, "  Logout"));
                         adapter = new CasoAdapter(this, listSliding);
                         listViewSliding.setAdapter(adapter);
 
                         break;
                     case "Español":
                         listSliding = new ArrayList<>();
-                        listSliding.add(new ItemSlideMenu( R.drawable.place, "   Mapa "));
+                        listSliding.add(new ItemSlideMenu(R.drawable.place, "   Mapa "));
                         listSliding.add(new ItemSlideMenu(R.drawable.ic_menu_send, "Añadir casos"));
                         listSliding.add(new ItemSlideMenu(R.drawable.add, "  Añadir focos"));
                         listSliding.add(new ItemSlideMenu(R.drawable.ic_menu_slideshow, "Mi casos añadidos"));
                         listSliding.add(new ItemSlideMenu(R.drawable.search, "  Buscar Casos"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.ic_menu_gallery,"Información"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.ic_menu_manage,"  Ajustes"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.ic_menu_share,"  Logout"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.ic_menu_gallery, "Información"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.ic_menu_manage, "  Ajustes"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.ic_menu_share, "  Logout"));
                         adapter = new CasoAdapter(this, listSliding);
                         listViewSliding.setAdapter(adapter);
 
@@ -186,14 +180,14 @@ public class NavigationActivity extends ActionBarActivity
 
                     case "English":
                         listSliding = new ArrayList<>();
-                        listSliding.add(new ItemSlideMenu( R.drawable.place, "   Map "));
+                        listSliding.add(new ItemSlideMenu(R.drawable.place, "   Map "));
                         listSliding.add(new ItemSlideMenu(R.drawable.add, "  Add Cases"));
                         listSliding.add(new ItemSlideMenu(R.drawable.add, "  Add Focos"));
                         listSliding.add(new ItemSlideMenu(R.drawable.list, "  My Cases Added"));
                         listSliding.add(new ItemSlideMenu(R.drawable.search, "  Search Cases"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.info,"  Informations"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.settings,"  Configurations"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.logoff,"  Logout"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.info, "  Informations"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.settings, "  Configurations"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.logoff, "  Logout"));
 
                         adapter = new CasoAdapter(this, listSliding);
                         listViewSliding.setAdapter(adapter);
@@ -201,14 +195,14 @@ public class NavigationActivity extends ActionBarActivity
 
                     default:
                         listSliding = new ArrayList<>();
-                        listSliding.add(new ItemSlideMenu( R.drawable.place, "  Mapa "));
+                        listSliding.add(new ItemSlideMenu(R.drawable.place, "  Mapa "));
                         listSliding.add(new ItemSlideMenu(R.drawable.add, "  Adicionar casos"));
                         listSliding.add(new ItemSlideMenu(R.drawable.add, "  Adicionar Focos"));
                         listSliding.add(new ItemSlideMenu(R.drawable.list, "  Meus casos adicionados"));
                         listSliding.add(new ItemSlideMenu(R.drawable.search, "  Buscar Casos"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.info,"  informações"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.settings,"  Configurações"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.logoff,"  Logout"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.info, "  informações"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.settings, "  Configurações"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.logoff, "  Logout"));
                         adapter = new CasoAdapter(this, listSliding);
                         listViewSliding.setAdapter(adapter);
                 }
@@ -216,7 +210,7 @@ public class NavigationActivity extends ActionBarActivity
             } while (cursor.moveToNext());
 
         }
-         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
@@ -253,9 +247,7 @@ public class NavigationActivity extends ActionBarActivity
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-      //  LView = (ListView)findViewById(R.id.)
-
-
+        //  LView = (ListView)findViewById(R.id.)
 
 
     }
@@ -273,68 +265,68 @@ public class NavigationActivity extends ActionBarActivity
     public void replaceFragment(int pos) {
         Fragment fragment = null;
         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-       // FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        // FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         String title = "";
         switch (pos) {
             case 0:
 
 
-                    mFragMap = new SupportMapFragment();
-                    mFragMap.getMapAsync(new OnMapReadyCallback() {
-                        @Override
-                        public void onMapReady(GoogleMap googleMap) {
-                                mMap = googleMap;
+                mFragMap = new SupportMapFragment();
+                mFragMap.getMapAsync(new OnMapReadyCallback() {
+                    @Override
+                    public void onMapReady(GoogleMap googleMap) {
+                        mMap = googleMap;
 
-                            try {
-                                configuraMapa();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                            //gotoLocation(CG_LAT,CG_LGT, DEFAULTZOM);
-                            }
+                        try {
+                            configuraMapa();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        //gotoLocation(CG_LAT,CG_LGT, DEFAULTZOM);
+                    }
 
 
-                    });
-               // getFragmentManager().popBackStack();
-                    valor=1;
-                    fm.beginTransaction()
+                });
+                // getFragmentManager().popBackStack();
+                valor = 1;
+                fm.beginTransaction()
 
-                            .replace(R.id.Container, mFragMap)
-                           // .addToBackStack("fragBack")
+                        .replace(R.id.Container, mFragMap)
+                        // .addToBackStack("fragBack")
 
-                            .commit();
+                        .commit();
 
-                   //ft.add(R.id.Container, mFragMap, "mapa");
-                   // ft.addToBackStack("topMapa");
+                //ft.add(R.id.Container, mFragMap, "mapa");
+                // ft.addToBackStack("topMapa");
                 // ft.commit();
 
                 break;
 
             case 1:
-                valor=0;
+                valor = 0;
                 fragment = new AddCasos();
-               // getFragmentManager().popBackStack();
+                // getFragmentManager().popBackStack();
                 fm.beginTransaction()
-                        .replace(R.id.Container,  fragment)
+                        .replace(R.id.Container, fragment)
                         .addToBackStack("fragBack")
                         .commit();
 
                 break;
             case 2:
-                valor=0;
+                valor = 0;
                 fragment = new addFocos();
                 // getFragmentManager().popBackStack();
                 fm.beginTransaction()
-                        .replace(R.id.Container,  fragment)
+                        .replace(R.id.Container, fragment)
                         .addToBackStack("fragBack")
                         .commit();
 
                 break;
             case 3:
-                valor=0;
+                valor = 0;
                 fragment = new CasosAdicionados();
-              //  Listar();
-              //  getFragmentManager().popBackStack();
+                //  Listar();
+                //  getFragmentManager().popBackStack();
                 fm.beginTransaction()
                         .replace(R.id.Container, fragment)
                         .addToBackStack("fragBack")
@@ -342,17 +334,17 @@ public class NavigationActivity extends ActionBarActivity
 
                 break;
             case 4:
-                valor=0;
+                valor = 0;
                 fragment = new buscar();
-               // getFragmentManager().popBackStack();
+                // getFragmentManager().popBackStack();
                 fm.beginTransaction()
-                        .replace(R.id.Container,  fragment)
+                        .replace(R.id.Container, fragment)
                         .addToBackStack("fragBack")
                         .commit();
 
                 break;
             case 5:
-                valor=0;
+                valor = 0;
                 fragment = new Informacoes();
                 fm.beginTransaction()
                         .replace(R.id.Container, fragment)
@@ -361,9 +353,9 @@ public class NavigationActivity extends ActionBarActivity
 
                 break;
             case 6:
-                valor=0;
+                valor = 0;
                 fragment = new Configuracao();
-              //  getFragmentManager().popBackStack();
+                //  getFragmentManager().popBackStack();
                 fm.beginTransaction()
                         .replace(R.id.Container, fragment)
                         .addToBackStack("fragBack")
@@ -371,9 +363,9 @@ public class NavigationActivity extends ActionBarActivity
 
                 break;
             case 7:
-                valor=0;
+                valor = 0;
                 fragment = new Sair();
-              //  getFragmentManager().popBackStack();
+                //  getFragmentManager().popBackStack();
                 fm.beginTransaction()
                         .replace(R.id.Container, fragment)
                         .addToBackStack("fragBack")
@@ -381,9 +373,9 @@ public class NavigationActivity extends ActionBarActivity
 
                 break;
             default:
-                valor=0;
+                valor = 0;
                 fragment = new Mapa();
-               // getFragmentManager().popBackStack();
+                // getFragmentManager().popBackStack();
                 fm.beginTransaction()
                         .replace(R.id.Container, fragment)
                         //.addToBackStack("fragBack")
@@ -398,11 +390,10 @@ public class NavigationActivity extends ActionBarActivity
     }
 
 
-
     private void configuraMapa() throws IOException {
 
         BancoDeDados bd = new BancoDeDados(this);
-        SQLiteDatabase banco= bd.getReadableDatabase();
+        SQLiteDatabase banco = bd.getReadableDatabase();
 
         Cursor cursor = banco.query("lingua", null, null, null, null, null, null);
         if (cursor.moveToLast()) {
@@ -414,52 +405,51 @@ public class NavigationActivity extends ActionBarActivity
         }
 
 
-
-        SQLiteDatabase bancoo= bd.getReadableDatabase();
-        Cursor cursorr = bancoo.query("usuario",null, null, null, null, null, null);
-        if (cursorr.moveToFirst()){
+        SQLiteDatabase bancoo = bd.getReadableDatabase();
+        Cursor cursorr = bancoo.query("usuario", null, null, null, null, null, null);
+        if (cursorr.moveToFirst()) {
             do {
                 String email = cursorr.getString(cursorr.getColumnIndex("email"));
                 String senha = cursorr.getString(cursorr.getColumnIndex("senha"));
                 Log.v("BD usuario email", email);
                 Log.v("BD usuario senha", senha);
-                if (email.equals(emaill) && senha.equals(senhaa)){
+                if (email.equals(emaill) && senha.equals(senhaa)) {
                     String aa = cursorr.getString(cursorr.getColumnIndex("id"));
-                    PNOME=cursorr.getString(cursorr.getColumnIndex("nome"));
-                    PSOBRENOME=cursorr.getString(cursorr.getColumnIndex("sobrenome"));
+                    PNOME = cursorr.getString(cursorr.getColumnIndex("nome"));
+                    PSOBRENOME = cursorr.getString(cursorr.getColumnIndex("sobrenome"));
                     PENDERECO = cursorr.getString(cursorr.getColumnIndex("endereco"));
                     PLAT = cursorr.getDouble(cursorr.getColumnIndex("lat"));
                     PLNG = cursorr.getDouble(cursorr.getColumnIndex("lng"));
 
                     latlng = new LatLng(PLAT, PLNG);
                 }
-            }while (cursorr.moveToNext());
+            } while (cursorr.moveToNext());
         }
 
         final CameraPosition cp = new CameraPosition.Builder().target(latlng).zoom(13).bearing(0).tilt(00).build();
-        CameraUpdate cam= CameraUpdateFactory.newCameraPosition(cp);
+        CameraUpdate cam = CameraUpdateFactory.newCameraPosition(cp);
         mMap.moveCamera(cam);
 
         //  addAdapter = new AddAdapter(ctx, R.layout.display_product_row);
         Cursor cursore = banco.query("Casos", null, null, null, null, null, null);
         while (cursore.moveToNext()) {
-            Log.e("Condiçao","entrou");
+            Log.e("Condiçao", "entrou");
             nomeP = cursore.getString(cursore.getColumnIndex("Pnome"));
             doencaP = cursore.getString(cursore.getColumnIndex("Pdoenca"));
             enderecoP = cursore.getString(cursore.getColumnIndex("Pendereco"));
             Plat1 = cursore.getDouble(cursore.getColumnIndex("Plat"));
             Plng2 = cursore.getDouble(cursore.getColumnIndex("Plng"));
 
-              final double plaat = Plat1;
+            final double plaat = Plat1;
             final double plnng = Plng2;
 
 
-             pos= new LatLng(plaat, plnng);
+            pos = new LatLng(plaat, plnng);
 
-            Log.e("Condiçao","ENTROU");
-            if (doencaP .equals("Dengue")) {
+            Log.e("Condiçao", "ENTROU");
+            if (doencaP.equals("Dengue")) {
                 MarkerOptions options = new MarkerOptions()
-                        .title(nomeP +" - Dengue" )
+                        .title(nomeP + " - Dengue")
                         .snippet(enderecoP)
                         .icon(BitmapDescriptorFactory.defaultMarker(
                                 BitmapDescriptorFactory.HUE_RED))
@@ -468,9 +458,9 @@ public class NavigationActivity extends ActionBarActivity
 
                 mMap.addMarker(options);
 
-            }else if (doencaP.equals("Zika vírus") ){
+            } else if (doencaP.equals("Zika vírus")) {
                 MarkerOptions options = new MarkerOptions()
-                        .title(nomeP +" - Zika vírus" )
+                        .title(nomeP + " - Zika vírus")
                         .snippet(enderecoP)
                         .icon(BitmapDescriptorFactory.defaultMarker(
                                 BitmapDescriptorFactory.HUE_GREEN))
@@ -479,7 +469,7 @@ public class NavigationActivity extends ActionBarActivity
 
                 mMap.addMarker(options);
 
-            }else if (doencaP.equals("Chikungunya") ) {
+            } else if (doencaP.equals("Chikungunya")) {
                 MarkerOptions options = new MarkerOptions()
                         .title(nomeP + " - Chicungunya")
                         .snippet(enderecoP)
@@ -489,19 +479,19 @@ public class NavigationActivity extends ActionBarActivity
 
                 mMap.addMarker(options);
                 Foco(nomeP);
-            } else if (doencaP.equals("Nyongnyong") ) {
-            MarkerOptions options = new MarkerOptions()
-                    .title(nomeP +" - Nyongnyong" )
-                    .snippet(enderecoP)
-                    .icon(BitmapDescriptorFactory.defaultMarker(
-                            BitmapDescriptorFactory.HUE_ORANGE))
-                    .position(pos);
-
-            mMap.addMarker(options);
-
-            } else if (doencaP.equals("Guillaint barré") ) {
+            } else if (doencaP.equals("Nyongnyong")) {
                 MarkerOptions options = new MarkerOptions()
-                        .title(nomeP +" - Guillaint barré" )
+                        .title(nomeP + " - Nyongnyong")
+                        .snippet(enderecoP)
+                        .icon(BitmapDescriptorFactory.defaultMarker(
+                                BitmapDescriptorFactory.HUE_ORANGE))
+                        .position(pos);
+
+                mMap.addMarker(options);
+
+            } else if (doencaP.equals("Guillaint barré")) {
+                MarkerOptions options = new MarkerOptions()
+                        .title(nomeP + " - Guillaint barré")
                         .snippet(enderecoP)
                         .icon(BitmapDescriptorFactory.defaultMarker(
                                 BitmapDescriptorFactory.HUE_YELLOW))
@@ -509,7 +499,7 @@ public class NavigationActivity extends ActionBarActivity
 
                 mMap.addMarker(options);
 
-            }else if (doencaP.equals("Foco")){
+            } else if (doencaP.equals("Foco")) {
                /* MarkerOptions options = new MarkerOptions()
                         .title("Foco")
                         .snippet(enderecoP)
@@ -520,7 +510,7 @@ public class NavigationActivity extends ActionBarActivity
                 mMap.addMarker(options);*/
                 drawCircle(pos);
 
-        }
+            }
 
 
         }
@@ -530,11 +520,9 @@ public class NavigationActivity extends ActionBarActivity
                 .SetSnipped("AKA whatever"));*/
 
 
-
-
     }
 
-    public void PinarMapa (View v) throws IOException {
+    public void PinarMapa(View v) throws IOException {
         try {
             PPNOME = AddCasos.Nome.getText().toString();
             //AddCasos.NOME += " - "   +  AddCasos.SpnOpcoes.getSelectedItem();
@@ -568,10 +556,9 @@ public class NavigationActivity extends ActionBarActivity
 
             AddCasos.Nome.setText("");
             AddCasos.Endereço.setText("");
-        }catch (IOException e ){
+        } catch (IOException e) {
             Toast.makeText(this, " O caso não pode ser registrado. Conecte-se a internet, e tente novamente.", Toast.LENGTH_SHORT).show();
         }
-
 
 
     }
@@ -644,47 +631,47 @@ public class NavigationActivity extends ActionBarActivity
     }
 
 
-        @Override
-        public void onBackPressed(){
-            if (valor == 1) {
-                new AlertDialog.Builder(this)
-                        .setTitle("Deseja sair do MapAedes?")
-                        .setMessage("Caso saia, você não seja deslogado de sua conta")
-                        .setPositiveButton("SIM",
-                                new DialogInterface.OnClickListener() {
+    @Override
+    public void onBackPressed() {
+        if (valor == 1) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Deseja sair do MapAedes?")
+                    .setMessage("Caso saia, você não seja deslogado de sua conta")
+                    .setPositiveButton("SIM",
+                            new DialogInterface.OnClickListener() {
 
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
 
-                                        moveTaskToBack(true);
-                                        android.os.Process.killProcess(android.os.Process.myPid());
-                                        System.exit(1);
-                                    }
-                                })
-                        .setNegativeButton("NÃO",
-                                new DialogInterface.OnClickListener() {
+                                    moveTaskToBack(true);
+                                    android.os.Process.killProcess(android.os.Process.myPid());
+                                    System.exit(1);
+                                }
+                            })
+                    .setNegativeButton("NÃO",
+                            new DialogInterface.OnClickListener() {
 
-                                    @Override
-                                    public void onClick(DialogInterface dialog,
-                                                        int which) {
-                                    }
-                                }).show();
-            }else{
-                Intent i = new Intent(this, NavigationActivity.class);
-                startActivity(i);
-            }
-
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                }
+                            }).show();
+        } else {
+            Intent i = new Intent(this, NavigationActivity.class);
+            startActivity(i);
         }
 
-    public void Foco(String nome){
-        if (nome.equals("Foco")){
+    }
+
+    public void Foco(String nome) {
+        if (nome.equals("Foco")) {
             drawCircle(pos);
         }
     }
 
 
-    public static void drawCircle(LatLng point){
+    public static void drawCircle(LatLng point) {
 
         // Instantiating CircleOptions to draw a circle around the marker
         CircleOptions circleOptions = new CircleOptions();
@@ -705,11 +692,11 @@ public class NavigationActivity extends ActionBarActivity
         circleOptions.strokeWidth(2);
 
         // Adding the circle to the GoogleMap
-       mMap.addCircle(circleOptions);
+        mMap.addCircle(circleOptions);
 
     }
 
-    public void ADICIONARFOCO(View view){
+    public void ADICIONARFOCO(View view) {
 
         Toast.makeText(this, addFocos.tipo, Toast.LENGTH_SHORT).show();
         String teste = addFocos.endereço.getText().toString().toLowerCase();
@@ -738,7 +725,7 @@ public class NavigationActivity extends ActionBarActivity
         helper.insertContactt(ah);
         Toast.makeText(this, "Foco registrado!", Toast.LENGTH_SHORT).show();
     }
-    }
+}
 
 
 

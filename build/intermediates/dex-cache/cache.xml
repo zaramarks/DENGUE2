@@ -1,3 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-8.4.0_8ec6abf8106965b8945b357ccf3905f21c15241b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.0_6366c3c2a8b52f9128edde0592cdd937797e8042/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.1.0_b50ded225e605a5a28beddfa5798cd6168c252df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-8.4.0_e0993d2bee2485f1b87bc816778d9e64a53028e4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.0_4c64c329dd7a84c32de1a426bde3da37b0906467/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.0_ac49c8274cd8a2ad8a3ff9544064e9ab37a23d02/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-8.4.0_134692e0ba0d5672ce11daa06d9be17cf7fc8627/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-8.4.0_803841c8adcf3561efecfa7cf8069f94d61b5876/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-measurement-8.4.0_d4e8c8ef1224a2b41a18e33e7bf369aef39e58a7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-8.4.0_c20509f8ab999c0d7ffe2fb82730739c204f1ffc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7efa16309d5018e6fa7b00c7e35ee9c2b62f3fe7">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_bb4accd2ec4a1e9c5ca7c8ac0017fac29b438a1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-8.4.0_dff69faa4d4665043e9d9a9458bbeaa8bd35a9a1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-8.4.0_8beeebd63dd3120b726c70f1d976255f3f7a7fe2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-8.4.0_c952d4685825f946bc26711bddfcd6d9af4be3bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-23.0.0_5baaaa13126b2f646a68b2fe5ba080f3b357ca74/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-8.4.0_e70d59bb30878a0325123bb26545e3623210c6e7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-8.4.0_012cd827bc03b7098299c68f35025548576f4f3a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4ede67d79b524150685626fd70ce28bab3d9e7f1">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_886e7a32d13e3c1e196c91d3dbe8b3cd8eb3bbff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-8.4.0_dac1297ad9d8a7ea4cea1e7554e572a611d87acf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.0_8b5c2df9417d460700acb5692e49397e5b392a2f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-8.4.0_0f7c425ad633901d155b8ccbb902e8ecf4f0fdeb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-8.4.0_d8b2f647d81a91beb9461d2701e2217733362b7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-8.4.0_3b9c8c59c2a512b2efd8829a37c162bc5459173f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-8.4.0_8a552e0b2d0b0a604c8246aa73dd7f48edfafdf3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-8.4.0_a7cab507cd0b31742f2bb1aead44d4777a7532c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-8.4.0_f9da3a40ec0004651eb69534a95fec05fc6004b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-8.4.0_7db93e46f2b9b9fe9bc81bced4e5b097965dab8b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.0_10e4ecd25d7a73ff4f293d954660407f0f5f3631/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-8.4.0_a745444c4abe5b010ef03febbb49516046c901cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-8.4.0_eb2896aa5b1bce3270d598e83a696cf7fdb720ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.0_5ca5e2e1fc1e658f9efb4b3dfd8588b716bcef01/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-8.4.0_611671c151f7ae8ef2ffd599e7947985c89d66bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="/home/mateus/AndroidStudioProjects/DENGUE/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-8.4.0_227cdbb5f1f5b6307b8faca74af288f0eb811cbb/classes.dex" />
+    </item>
+
+</items>
