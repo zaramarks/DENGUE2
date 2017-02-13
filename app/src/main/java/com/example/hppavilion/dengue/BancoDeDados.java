@@ -32,7 +32,7 @@ public class BancoDeDados extends SQLiteOpenHelper {
     public static final String COL_DOENCA = "Pdoenca";
     public static final String COL_LAT = "Plat";
     public static final String COL_LNG = "Plng";
-    private static final String TAG = "DBAdapter";
+
     private static  final String TABLE_CREATE2 = "create table Casos ( Pid integer primary key  , "+" Pnome TEXT , Pdoenca TEXT , Pendereco TEXT, Plat REAL, Plng REAL  );";
 
     private static final String COL_IDL = "idd";

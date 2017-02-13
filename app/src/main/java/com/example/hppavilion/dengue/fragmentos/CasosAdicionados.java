@@ -75,7 +75,7 @@ public class CasosAdicionados extends Fragment  {
                         doenca.add(R.mipmap.orange);
                         break;
                     default:
-                        doenca.add(R.mipmap.red);
+                        doenca.add(R.mipmap.point);
                         Toast.makeText(getActivity(),pdoenca, Toast.LENGTH_SHORT).show();
 
                 }

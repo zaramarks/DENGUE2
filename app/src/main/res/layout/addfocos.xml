@@ -1,65 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="500dp"><![CDATA[
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    ]]>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
-        android:id="@+id/ed"
-        android:backgroundTint="@color/colorAccent"
-        android:layout_below="@+id/textView7"
-        android:layout_marginRight="75dp"
-        android:layout_marginLeft="14dp" />
-
-    <TextView
+<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Endereço:"
         android:id="@+id/textView7"
-        android:layout_marginTop="30dp" />
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/ed"
+        android:layout_alignStart="@+id/ed"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="14dp" />
+
+    <EditText
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/ed"
+        android:backgroundTint="@color/colorItem"
+        android:layout_below="@+id/textView7"
+        android:layout_toLeftOf="@+id/fab"
+        android:layout_toStartOf="@+id/fab"
+        android:layout_marginLeft="14dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adquirir localização atual"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
 
     <android.support.design.widget.FloatingActionButton
           android:id="@+id/fab"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="right"
-          android:src="@mipmap/current"
+          android:layout_width="54dp"
+          android:layout_height="40dp"
+        android:src="@mipmap/current"
 
           app:elevation="6dp"
           app:pressedTranslationZ="12dp"
         android:layout_alignBottom="@+id/ed"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.04"
+        android:layout_marginTop="15dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Adicionar Foco"
         android:textStyle="bold"
         android:id="@+id/button2"
         android:background="#00ffffff"
         android:textSize="20sp"
-        android:textColor="@color/colorAccent"
+
+        android:textColor="@color/colorItem"
         android:onClick="ADICIONARFOCO"
+        android:layout_marginTop="72dp"
         android:layout_below="@+id/ed"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp" />
+        android:layout_centerHorizontal="true" />
 
     <!-- <ImageButton
         android:layout_width="65dp"
@@ -74,6 +84,5 @@
         android:layout_alignEnd="@+id/RG" />-->
 
 
-</RelativeLayout>
+</LinearLayout>
 
-</android.support.design.widget.CoordinatorLayout>

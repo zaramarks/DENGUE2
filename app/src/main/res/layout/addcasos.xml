@@ -78,7 +78,7 @@
         android:text="Registrar Caso"
         android:id="@+id/Registrar"
         android:onClick="PinarMapa"
-        android:background="@color/colorAccent"
+        android:background="@color/colorItem"
         android:textColor="#fff"
         android:layout_gravity="right"
         android:layout_marginTop="70dp"

@@ -61,7 +61,7 @@ public class MenuDeEntrada extends AppCompatActivity {
         BancoDeDados bd = new BancoDeDados(this);
         SQLiteDatabase banco = bd.getReadableDatabase();
 
-        //  banco.execSQL("DELETE FROM lingua"); //delete all rows in a table
+         //banco.execSQL("DELETE FROM lingua"); //delete all rows in a table
 
         // banco.execSQL ("UPDATE lingua SET emaill = null");
         // banco.execSQL ("UPDATE lingua SET senhaa = null");

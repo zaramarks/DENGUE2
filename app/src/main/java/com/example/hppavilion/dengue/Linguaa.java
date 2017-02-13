@@ -28,8 +28,6 @@ import android.widget.Toast;
  */
 public class Linguaa extends AppCompatActivity {
 
-    public Spinner sl;
-    public static ArrayAdapter<String> LanguageOpcoes;
     public static String Lingua, LINGUA;
     public Button login, cadastroo;
     String cursorr;
@@ -125,66 +123,5 @@ public class Linguaa extends AppCompatActivity {
                 break;
         }
     }
-      /*
-        BancoDeDados bd = new BancoDeDados(this);
-        SQLiteDatabase banco = bd.getReadableDatabase();
-        Cursor cursor = banco.query("lingua", null, null, null, null, null, null);
-       if (cursor.moveToFirst()) {
-            do {
-                cursorr = cursor.getColumnIndex("idd");
-
-            }while (cursor.moveToNext());
-        }
-
-        if (cursorr >= 0){
-
-            String delete = "DELETE FROM lingua";
-            banco.rawQuery(delete, null);
-
-            Lingua = (String) sl.getSelectedItem();
-            SQL c = new SQL();
-            c.setLingua(Lingua);
-            helper.insertContacttt(c);
-
-            Toast.makeText(this, "IF!", Toast.LENGTH_SHORT).show();
-        }else  {
-            Lingua = (String) sl.getSelectedItem();
-            Toast.makeText(this, "ELSE", Toast.LENGTH_SHORT).show();
-
-            SQL c = new SQL();
-            c.setLingua(Lingua);
-            helper.insertContacttt(c);
-        }
-
-        if (cursor.moveToFirst()) {
-            do {
-                LINGUA = cursor.getString(cursor.getColumnIndex("linguaa"));
-                switch (LINGUA) {
-                    case "Português":
-                        cadastroo.setText("Cadastre-se");
-
-                        // Toast.makeText(this, "Lingua alterada!", Toast.LENGTH_SHORT).show();
-
-
-                        break;
-                    case "Español":
-                        cadastroo.setText("Registrar");
-                        // Toast.makeText(this, "El lenguaje cambia!", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case "English":
-                        cadastroo.setText("Register");
-                        //Toast.makeText(this, "Language changed!", Toast.LENGTH_SHORT).show();
-
-                        break;
-
-                    default:
-                        cadastroo.setText("Cadastree-se");
-
-
-                }
-            }while (cursor.moveToNext());
-        }*/
-
 
 }

@@ -148,14 +148,7 @@ public class NavigationActivity extends ActionBarActivity
 
         SQLiteDatabase banco = helper.getReadableDatabase();
         Cursor cursor = banco.query("lingua", null, null, null, null, null, null);
-          /*   if (cursor.moveToFirst()) {
 
-        do {
-        String nomees = cursor.getString(cursor.getColumnIndex("emaill"));
-        //email.setText(nomees);
-        Toast.makeText(this, nomees, Toast.LENGTH_SHORT).show();
-     } while (cursor.moveToNext());
-}*/
         if (cursor.moveToFirst()) {
 
             String Linguaa = cursor.getString(cursor.getColumnIndex("linguaa"));
@@ -201,6 +194,7 @@ public class NavigationActivity extends ActionBarActivity
                         listSliding.add(new ItemSlideMenu(R.drawable.info,"  Informations"));
                         listSliding.add(new ItemSlideMenu(R.drawable.settings,"  Configurations"));
                         listSliding.add(new ItemSlideMenu(R.drawable.logoff,"  Logout"));
+
                         adapter = new CasoAdapter(this, listSliding);
                         listViewSliding.setAdapter(adapter);
                         break;
@@ -604,22 +598,12 @@ public class NavigationActivity extends ActionBarActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-       /* SearchView searchView =(SearchView)menu.findItem(R.id.menu_search).getActionView();
-        SearchManager searchManager=(SearchManager)getSystemService(Context.SEARCH_SERVICE);
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));*/
+
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activ
-        //
-        //
-        //
-        // ity in AndroidManifest.xml.
-
 
         return super.onOptionsItemSelected(item);
     }
@@ -629,8 +613,6 @@ public class NavigationActivity extends ActionBarActivity
     public void onStart() {
         super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client.connect();
         Action viewAction = Action.newAction(
                 Action.TYPE_VIEW, // TODO: choose an action type.
@@ -714,10 +696,10 @@ public class NavigationActivity extends ActionBarActivity
         circleOptions.radius(500);
 
         // Border color of the circle
-        circleOptions.strokeColor(Color.TRANSPARENT);
+        circleOptions.strokeColor(Color.BLACK);
 
         // Fill color of the circle
-        circleOptions.fillColor(0x55F44336);
+        circleOptions.fillColor(0x550000);
 
         // Border width of the circle
         circleOptions.strokeWidth(2);

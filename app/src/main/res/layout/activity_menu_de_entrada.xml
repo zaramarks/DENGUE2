@@ -37,7 +37,7 @@
         android:textColor="#fff"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:background="@color/colorAccent"
+        android:background="@color/colorItem"
         android:layout_gravity="center_vertical"
         android:layout_below="@+id/editText2"
         android:layout_alignParentLeft="true"

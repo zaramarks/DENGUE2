@@ -33,7 +33,8 @@
             android:id="@+id/toolbar"
             android:layout_width="383dp"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/gradient"
+            android:titleTextColor="#f1f0f0"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             android:layout_alignParentEnd="true" />
     </FrameLayout>
@@ -45,16 +46,7 @@
         android:layout_alignParentStart="true"
         android:id="@+id/Containerrr">
 
-       <!-- <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarr"
-            android:layout_width="301dp"
-            android:layout_height="40dp"
-            android:background="#00000000"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="80dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp" /> -->
+
 
         <SearchView
             android:layout_width="match_parent"
@@ -74,8 +66,8 @@
 
         <LinearLayout
             android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:background="@color/colorPrimary"
+            android:layout_height="130dp"
+            android:background="#262626"
             android:id="@+id/linearLayout"
             android:orientation="vertical"
             android:layout_gravity="left|top"
@@ -85,57 +77,51 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/NOME"
-                android:id="@+id/NOME"
-                android:layout_marginTop="90dp" />
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:id="@+id/imageView7"
+                android:src="@mipmap/logozinha" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="267dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#fff"
+                android:textSize="20sp"
+
+                android:text="Zara Hiraoka Marks"
+                android:id="@+id/NOME"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="76dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="@string/Remaill"
+                android:textColor="#fff"
+                android:textSize="10sp"
                 android:id="@+id/EMAIL" />
+
         </LinearLayout>
 
-      <!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
-            android:fillViewport="true"
-            android:layout_below="@+id/linearLayout2"></ScrollView>
-        -->
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="#fff"
-            android:layout_below="@+id/linearLayout"
-            android:layout_alignRight="@+id/linearLayout"
-            android:layout_alignEnd="@+id/linearLayout"
-            android:id="@+id/linearLayout2"
-            android:layout_alignParentStart="true"></LinearLayout>
+
+
 
         <ListView
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
             android:id="@+id/lv"
-            android:background="#fff"
+            android:background="@color/colorPrimaryDark"
             android:choiceMode="singleChoice"
-            android:textColor="#ac6565"
-            android:textSize="100dp"
-            android:divider="#000000"
 
-            android:dividerHeight="0dp"
             android:entries="@array/nav"
             android:layout_gravity="left|bottom"
-            android:layout_below="@+id/linearLayout2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/linearLayout">
 
         </ListView>
 
