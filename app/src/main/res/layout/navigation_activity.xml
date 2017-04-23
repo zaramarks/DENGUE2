@@ -98,7 +98,7 @@
                 android:layout_width="76dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/Remaill"
+                android:text="@string/nome_usuario"
                 android:textColor="#fff"
                 android:textSize="10sp"
                 android:id="@+id/EMAIL" />

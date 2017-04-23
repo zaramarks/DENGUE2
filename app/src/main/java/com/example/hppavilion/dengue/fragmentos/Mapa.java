@@ -1,33 +1,15 @@
 package com.example.hppavilion.dengue.fragmentos;
 
-import android.Manifest;
-
-import android.app.Activity;
-
-import android.support.v4.app.ActivityCompat;
-
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-import android.support.v4.app.Fragment;
-
 import com.example.hppavilion.dengue.R;
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Mapa extends Fragment implements OnMapReadyCallback {
     private SupportMapFragment mapFrag;
@@ -35,8 +17,8 @@ public class Mapa extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragmento1, container, false);
 
-        GoogleMapOptions options = new GoogleMapOptions();
-        options.zOrderOnTop(true);
+        //GoogleMapOptions options = new GoogleMapOptions();
+        //options.zOrderOnTop(true);
 
 
 

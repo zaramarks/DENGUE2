@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
@@ -7,131 +7,130 @@
     android:orientation="vertical">
 
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_marginTop="20dp">
 
 
+        <!-- <TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Buscar"
+android:textStyle="bold"
+android:textSize="25sp"
+android:textColor="@color/colorAccent"
+android:id="@+id/textView2"
+android:layout_gravity="center_horizontal"
+android:layout_marginTop="15dp" /> -->
 
-   <RadioGroup
-       android:layout_width="match_parent"
-       android:layout_height="320dp"
-       android:layout_alignParentLeft="true"
-       android:layout_alignParentStart="false"
-       android:id="@+id/radioGroup2"
-       android:layout_alignParentEnd="true">
 
-      <!-- <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Buscar"
-           android:textStyle="bold"
-           android:textSize="25sp"
-           android:textColor="@color/colorAccent"
-           android:id="@+id/textView2"
-           android:layout_gravity="center_horizontal"
-           android:layout_marginTop="15dp" /> -->
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOENÇA"
+            android:textStyle="bold"
+            android:id="@+id/checkBox2"
+            android:textColor="#000"
+            android:theme="@style/checkBoxStyle"
+            android:checked="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"/>
+        <RadioButton
+            android:text="@string/dengue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2"
+            android:enabled="false"
+            android:layout_alignBaseline="@+id/radioButton6"
+            android:layout_alignBottom="@+id/radioButton6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"/>
 
-       <CheckBox
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="NOME"
-           android:id="@+id/checkBox"
-           android:layout_marginTop="10dp"
-           android:checked="false"
-           android:textStyle="bold"
-           android:theme="@style/checkBoxStyle"
-           android:textColor="#000"
-           android:layout_alignParentTop="true"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentStart="true" />
-
-       <EditText
-           android:layout_width="match_parent"
-           android:layout_height="40dp"
-           android:id="@+id/etNome"
-           android:layout_below="@+id/checkBox"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentStart="true"
-           android:layout_alignParentRight="true"
-           android:layout_alignParentEnd="true" />
-
-       <CheckBox
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="DOENÇA"
-           android:textStyle="bold"
-           android:id="@+id/checkBox2"
-           android:textColor="#000"
-           android:theme="@style/checkBoxStyle"
-           android:layout_below="@+id/etEndereco"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentStart="true"
-           android:checked="false" />
-
-       <Spinner
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:id="@+id/etDoenca" />
-
-       <CheckBox
-        android:layout_width="wrap_content"
+    <RadioButton
+        android:text="@string/zika_virus"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ENDEREÇO"
-        android:id="@+id/checkBox3"
-        android:layout_below="@+id/etNome"
-           android:textStyle="bold"
-           android:theme="@style/checkBoxStyle"
-           android:textColor="#000"
+        android:id="@+id/radioButton3"
+        android:enabled="false"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/radioButton4"
+        android:layout_alignLeft="@+id/radioButton4"
+        android:layout_alignStart="@+id/radioButton4"/>
 
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:checked="false"
-           android:layout_marginTop="15dp" />
+    <RadioButton
+        android:text="@string/chikungunya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton4"
+        android:layout_marginLeft="20dp"
+        android:enabled="false"
+        android:layout_below="@+id/radioButton5"
+        android:layout_alignLeft="@+id/radioButton5"
+        android:layout_alignStart="@+id/radioButton5"
+        />
 
+    <RadioButton
+            android:text="@string/guillaint_barre"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton5"
+            android:enabled="false"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/radioButton6"
+            android:layout_alignLeft="@+id/radioButton6"
+            android:layout_alignStart="@+id/radioButton6"/>
 
-       <EditText
-           android:layout_width="match_parent"
-           android:layout_height="40dp"
-           android:id="@+id/etEndereco"
-           android:layout_below="@+id/checkBox2"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentStart="true"
-           android:layout_alignParentRight="true"
-           android:layout_alignParentEnd="true" />
+    <RadioButton
+            android:text="@string/nyongnyong"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton6"
+            android:enabled="false"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/buscar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+        />
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Selecione os tópicos em que deseja se achar os casos. Nesta aba será feito um filtro e voce encontrará apenas os casos desejados"
-           android:id="@+id/textView"
-           android:textColor="#8b8a8a"
-           android:layout_alignBottom="@+id/radioGroup2"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentStart="true" />
+    <CheckBox
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="ENDEREÇO"
+         android:id="@+id/checkBox3"
+         android:textStyle="bold"
+            android:theme="@style/checkBoxStyle"
+            android:textColor="#000"
 
-   </RadioGroup>
+         android:checked="false"
+         android:layout_below="@+id/etEndereco"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true"
+         android:layout_marginLeft="8dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="28dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/etEndereco"
+            android:layout_below="@+id/radioButton4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="Buscar"
+        android:text="Search"
 
 
         android:id="@+id/buscar"
-        android:background="#00ffffff"
+        android:background="@color/colorPrimary"
         android:textStyle="bold"
         android:textSize="17sp"
-        android:textColor="@color/colorAccent"
-        android:layout_below="@+id/radioGroup2"
+        android:textColor="#fff"
+        android:layout_alignTop="@+id/checkBox2"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"/>
 
 
-</RelativeLayout>
+</LinearLayout>
 
-</RelativeLayout>

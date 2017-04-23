@@ -68,7 +68,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Rconfirmar"
+        android:text="@string/confirmar"
         android:id="@+id/button3"
         android:onClick="CONFIRMAR"
         android:background="@color/colorAccent"

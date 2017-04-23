@@ -1,29 +1,21 @@
 package com.example.hppavilion.dengue;
 
 import android.app.AlertDialog;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.os.StrictMode;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.example.hppavilion.dengue.fragmentos.Sair;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 
 public class MenuDeEntrada extends AppCompatActivity {
 
@@ -61,7 +53,7 @@ public class MenuDeEntrada extends AppCompatActivity {
         BancoDeDados bd = new BancoDeDados(this);
         SQLiteDatabase banco = bd.getReadableDatabase();
 
-         //banco.execSQL("DELETE FROM lingua"); //delete all rows in a table
+        // banco.execSQL("DELETE FROM lingua"); //delete all rows in a table
 
         // banco.execSQL ("UPDATE lingua SET emaill = null");
         // banco.execSQL ("UPDATE lingua SET senhaa = null");
@@ -224,7 +216,7 @@ public class MenuDeEntrada extends AppCompatActivity {
 
                 email = cursor.getString(cursor.getColumnIndex("email"));
                 senha = cursor.getString(cursor.getColumnIndex("senha"));
-                String tipo = cursor.getString(cursor.getColumnIndex("tipo"));
+
                 Log.e("BD", "entrou no banco de dadaos");
 
                 if (email.equals(email1) && senha.equals(senha1)) {
@@ -235,9 +227,9 @@ public class MenuDeEntrada extends AppCompatActivity {
                         helper.insertContacttt(c);
                    // banco.execSQL ("UPDATE lingua SET emaill = null");
                   //  banco.execSQL ("UPDATE lingua SET senhaa = null");
-                 //  banco.execSQL("UPDATE lingua SET emaill = xx WHERE id=1 ");
+                 // banco.execSQL("UPDATE lingua SET emaill = xx WHERE id=1 ");
                   //  banco.execSQL("UPDATE lingua SET senhaa = xxx WHERE id=1 ");
-                    Toast.makeText(this, tipo, Toast.LENGTH_SHORT).show();
+
                     Intent a = new Intent(MenuDeEntrada.this, NavigationActivity.class);
                     startActivity(a);
                     finish();

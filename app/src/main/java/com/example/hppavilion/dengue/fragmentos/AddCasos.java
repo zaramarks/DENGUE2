@@ -71,7 +71,7 @@ public class AddCasos extends Fragment  {
         adpOpcoes.add("Zika vírus");
         adpOpcoes.add("Chikungunya");
         adpOpcoes.add("Nyongnyong");
-        adpOpcoes.add("Guillaint barré");
+        adpOpcoes.add("Guillain barré");
 
         NavigationActivity act = (NavigationActivity) getActivity();
         Endereço = (AutoCompleteTextView) v.findViewById(R.id.endereço);

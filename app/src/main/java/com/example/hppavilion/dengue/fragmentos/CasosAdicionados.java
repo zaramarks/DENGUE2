@@ -68,7 +68,7 @@ public class CasosAdicionados extends Fragment  {
                     case "Chikungunya":
                         doenca.add(R.mipmap.blue);
                         break;
-                    case "Guillaint barré":
+                    case "Guillain barré":
                         doenca.add(R.mipmap.yellow);
                         break;
                     case "Nyongnyong":
@@ -84,37 +84,7 @@ public class CasosAdicionados extends Fragment  {
         } while (cursor.moveToNext());
     }
 
-        //adapter = new AddAdapter(getActivity(), listSliding);
-       // lstDados.setAdapter(adapter);
 
-
-      /*  Cursor contatos = database.query("Casos", campos, null, null, null, null, null);
-
-
-            //cria cursor que será exibido na tela, nele serão exibidos
-            //todos os contatos cadastrados
-            dataSource = new SimpleCursorAdapter(getActivity(), R.layout.list_item, contatos,
-                    campos, new int[] { R.id.NomeList, R.id.DoencaList , R.id.EnderecoList});
-
-            //relaciona o dataSource ao próprio listview
-            lstDados.setAdapter(dataSource);*/
-/*        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-
-                EditText searchEditText = (EditText) sv.findViewById(android.support.v7.appcompat.R.id.search_src_text);
-                Log.v("Pato", String.valueOf(searchEditText));
-
-
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                Log.v("Pes", "B");
-                return false;
-            }
-        });*/
         return v;
     }
 

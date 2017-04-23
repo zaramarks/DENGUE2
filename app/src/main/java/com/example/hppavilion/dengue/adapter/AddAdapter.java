@@ -11,7 +11,6 @@ import android.widget.TextView;
 import com.example.hppavilion.dengue.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by HP PAVILION on 04/04/2016.
@@ -53,9 +52,9 @@ public class AddAdapter extends BaseAdapter {
             View v;
             LayoutInflater li = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = li.inflate(R.layout.list_item, parent, false);
-             img = (ImageView)v.findViewById(R.id.imageVie);
+            img = (ImageView)v.findViewById(R.id.imageVie);
             nomee = (TextView)v.findViewById(R.id.NomeList);
-             enderecoo = (TextView)v.findViewById(R.id.enderecoList);
+            enderecoo = (TextView)v.findViewById(R.id.enderecoList);
             img.setImageResource(doenca.get(position));
             nomee.setText(nome.get(position));
             enderecoo.setText(endereco.get(position));

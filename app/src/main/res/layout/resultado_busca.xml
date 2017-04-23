@@ -14,11 +14,9 @@
     android:weightSum="1">
 
 
-    <ListView android:id="@+id/buscaas"
-
-        android:layout_height="244dp"
-        android:layout_width="wrap_content"
-        android:layout_weight="0.99">
-    </ListView>
-
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"/>
 </LinearLayout>

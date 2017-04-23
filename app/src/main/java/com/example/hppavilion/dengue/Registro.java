@@ -1,6 +1,7 @@
 package com.example.hppavilion.dengue;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Address;
 import android.location.Geocoder;
@@ -14,13 +15,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.database.*;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hppavilion.dengue.adapter.PlaceAutocompleteAdapter;
-import com.example.hppavilion.dengue.fragmentos.AddCasos;
 
 import java.io.IOException;
 import java.util.List;

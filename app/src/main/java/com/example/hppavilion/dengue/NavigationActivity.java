@@ -23,7 +23,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -72,7 +71,7 @@ import java.util.Locale;
 public class NavigationActivity extends ActionBarActivity
         implements Mapa.NavigationDrawerCallBack, AddCasos.OnFragmentInteractionListener, Informacoes.OnFragmentInteractionListener,
         CasosAdicionados.OnFragmentInteractionListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, Sair.OnFragmentInteractionListener,
-        Configuracao.OnFragmentInteractionListener, buscar.OnFragmentInteractionListener, addFocos.OnFragmentInteractionListener
+        Configuracao.OnFragmentInteractionListener, resultadoBusca.OnFragmentInteractionListener, addFocos.OnFragmentInteractionListener
 
 
 {
@@ -96,7 +95,7 @@ public class NavigationActivity extends ActionBarActivity
 
     public static GoogleMap mMap;
     public GoogleApiClient client;
-    public FragmentManager fm = getSupportFragmentManager();
+        public FragmentManager fm = getSupportFragmentManager();
     public static String PPDOENCA, PPENDERECO, PPNOME, PPPENDERECO;
     public double Plat1;
     public double Plng2;
@@ -271,7 +270,7 @@ public class NavigationActivity extends ActionBarActivity
             case 0:
 
 
-                mFragMap = new SupportMapFragment();
+               mFragMap = new SupportMapFragment();
                 mFragMap.getMapAsync(new OnMapReadyCallback() {
                     @Override
                     public void onMapReady(GoogleMap googleMap) {
@@ -489,9 +488,9 @@ public class NavigationActivity extends ActionBarActivity
 
                 mMap.addMarker(options);
 
-            } else if (doencaP.equals("Guillaint barré")) {
+            } else if (doencaP.equals("Guillain barré")) {
                 MarkerOptions options = new MarkerOptions()
-                        .title(nomeP + " - Guillaint barré")
+                        .title(nomeP + " - Guillain barré")
                         .snippet(enderecoP)
                         .icon(BitmapDescriptorFactory.defaultMarker(
                                 BitmapDescriptorFactory.HUE_YELLOW))
@@ -581,13 +580,7 @@ public class NavigationActivity extends ActionBarActivity
                 .build();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
 
-
-        return super.onCreateOptionsMenu(menu);
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -725,6 +718,8 @@ public class NavigationActivity extends ActionBarActivity
         helper.insertContactt(ah);
         Toast.makeText(this, "Foco registrado!", Toast.LENGTH_SHORT).show();
     }
+
+
 }
 
 

@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="* Nome Completo:"
+        android:text="@string/nome_completo"
         android:textColor="#000"
         android:textSize="17sp"
         android:id="@+id/nomep"
@@ -18,7 +18,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/NomeP"
-        android:hint="Ex: Maria Aquino"
         android:textSize="15dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
@@ -29,7 +28,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Doença:"
+        android:text="@string/doenca"
         android:textSize="17sp"
         android:textColor="#000"
         android:id="@+id/tdoencap"
@@ -46,7 +45,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Endereço:"
+        android:text="@string/endereco"
         android:textSize="17sp"
         android:textColor="#000"
         android:id="@+id/enderecop"
@@ -75,7 +74,7 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:text="Registrar Caso"
+        android:text="@string/registrar_caso"
         android:id="@+id/Registrar"
         android:onClick="PinarMapa"
         android:background="@color/colorItem"
