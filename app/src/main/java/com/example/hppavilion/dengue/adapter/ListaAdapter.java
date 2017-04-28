@@ -8,11 +8,13 @@ public class ListaAdapter {
 
     String tipo;
     String endereco;
+    String nome;
     Double lat, lng;
 
-    public ListaAdapter(String tipo, String endereco, Double lat, Double lng) {
+    public ListaAdapter(String tipo, String endereco, String nome, Double lat, Double lng) {
         this.tipo = tipo;
         this.endereco = endereco;
+        this.nome = nome;
         this.lat = lat;
         this.lng = lng;
     }
@@ -47,5 +49,13 @@ public class ListaAdapter {
 
     public void setLng(Double lng) {
         this.lng = lng;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

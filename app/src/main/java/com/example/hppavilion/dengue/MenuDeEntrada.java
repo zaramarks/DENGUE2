@@ -245,7 +245,7 @@ public class MenuDeEntrada extends AppCompatActivity {
 
         if (conta == 0) {
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setTitle("Email ou senha incorretos");
+            dlg.setTitle("Email or password incorrect");
             dlg.setNeutralButton("OK", null);
             AlertDialog dialog = dlg.create();
             dialog.show();

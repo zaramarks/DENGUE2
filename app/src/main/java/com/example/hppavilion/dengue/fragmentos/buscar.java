@@ -1,5 +1,6 @@
 package com.example.hppavilion.dengue.fragmentos;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import com.example.hppavilion.dengue.BancoDeDados;
 import com.example.hppavilion.dengue.NavigationActivity;
 import com.example.hppavilion.dengue.R;
 import com.example.hppavilion.dengue.adapter.ListaAdapter;
+import com.example.hppavilion.dengue.resultadoBusca;
 
 import java.util.ArrayList;
 
@@ -27,12 +29,12 @@ public class buscar extends Fragment implements View.OnClickListener {
 
     private CheckBox checkBox, checkBox2, checkBox3;
     public  EditText  etENDERECO;
-    public  int a=0, b=0, c=0, a1 =0, a2 = 0, a3=0, a4=0, a5=0, tipo=0, endereco=0;
-    public RadioButton  dengue, zika, chikungunya, guillain_barre, nyong_nyong;
-    public ArrayList<ListaAdapter> result = new ArrayList<>();
-    public ArrayList<String> lista = new ArrayList<>();
-    public String doencaP, enderecoP, etendereco, nomeP;
-    public double Plat1, Plng2;
+    public static  int a=0, b=0, c=0, a1 =0, a2 = 0, a3=0, a4=0, a5=0, a6 =0, tipo=0, endereco=0;
+    public RadioButton  dengue, zika, chikungunya, guillain_barre, nyong_nyong, focus;
+    public static ArrayList<ListaAdapter> result = new ArrayList<>();
+    public  ArrayList<String> lista = new ArrayList<>();
+    public static String doencaP, enderecoP, etendereco, nomeP;
+    public  Double Plat1, Plng2;
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,6 +52,8 @@ public class buscar extends Fragment implements View.OnClickListener {
         chikungunya = (RadioButton)g.findViewById(R.id.radioButton4);
         guillain_barre = (RadioButton)g.findViewById(R.id.radioButton5);
         nyong_nyong = (RadioButton)g.findViewById(R.id.radioButton6);
+        focus = (RadioButton)g.findViewById(R.id.radioButton);
+
 
 
         etENDERECO = (EditText)g.findViewById(R.id.etEndereco);
@@ -67,6 +71,7 @@ public class buscar extends Fragment implements View.OnClickListener {
                     chikungunya.setEnabled(true);
                     guillain_barre.setEnabled(true);
                     nyong_nyong.setEnabled(true);
+                    focus.setEnabled(true);
                     b=1;
                 }else{
                     dengue.setEnabled(false);
@@ -74,12 +79,14 @@ public class buscar extends Fragment implements View.OnClickListener {
                     chikungunya.setEnabled(false);
                     guillain_barre.setEnabled(false);
                     nyong_nyong.setEnabled(false);
+                    focus.setEnabled(false);
 
                     dengue.setChecked(false);
                     zika.setChecked(false);
                     chikungunya.setChecked(false);
                     guillain_barre.setChecked(false);
                     nyong_nyong.setChecked(false);
+                    focus.setChecked(false);
 
                     b=0;
                 }
@@ -173,6 +180,20 @@ public class buscar extends Fragment implements View.OnClickListener {
                 }
             }
         });
+        focus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (focus.isChecked()) {
+                    if (a6 == 1) {
+                        focus.setChecked(false);
+                        a6 = 0;
+                    } else {
+                        focus.setChecked(true);
+                        a6 = 1;
+                    }
+                }
+            }
+        });
 
 
 
@@ -198,10 +219,13 @@ public class buscar extends Fragment implements View.OnClickListener {
                         lista.add("Chikungunya");
                     }
                     if (guillain_barre.isChecked()) {
-                        lista.add("Guillain barre");
+                        lista.add("Guillain barré");
                     }
                     if (nyong_nyong.isChecked()) {
                         lista.add("Nyongnyong");
+                    }
+                    if (focus.isChecked()){
+                        lista.add("Foco");
                     }
                 }
 
@@ -230,12 +254,12 @@ public class buscar extends Fragment implements View.OnClickListener {
 
                                 if (doencaP.equals(nome)) {
                                     if (endereco == 0) {
-                                        ListaAdapter listaAdapter = new ListaAdapter(doencaP, enderecoP, Plat1, Plng2);
+                                        ListaAdapter listaAdapter = new ListaAdapter(doencaP, enderecoP,nomeP, Plat1, Plng2);
                                         result.add(listaAdapter);
                                         // Toast.makeText(getActivity(),"oi", Toast.LENGTH_SHORT).show();
                                     } else {
                                         if (enderecoP.contains(etendereco)){
-                                            ListaAdapter listaAdapter = new ListaAdapter(doencaP, enderecoP, Plat1, Plng2);
+                                            ListaAdapter listaAdapter = new ListaAdapter(doencaP, enderecoP, nomeP, Plat1, Plng2);
                                             result.add(listaAdapter);
                                         }
                                     }
@@ -250,14 +274,15 @@ public class buscar extends Fragment implements View.OnClickListener {
                  Endereco();
                 }
                // Busca();
+                Intent intent = new Intent(getActivity(), resultadoBusca.class);
+                startActivity(intent);
             }
 
             });
 
 
 
-                        //Intent intent = new Intent(getActivity(), resultadoBusca.class);
-                       // startActivity(intent);
+
 
 
 
@@ -287,7 +312,7 @@ public class buscar extends Fragment implements View.OnClickListener {
                 Plng2 = cursore.getDouble(cursore.getColumnIndex("Plng"));
 
                 if (enderecoP.contains(etendereco)){
-                    ListaAdapter listaAdapter = new ListaAdapter(doencaP, enderecoP, Plat1, Plng2);
+                    ListaAdapter listaAdapter = new ListaAdapter(doencaP, enderecoP, nomeP, Plat1, Plng2);
                     result.add(listaAdapter);
                 }
             } while (cursore.moveToNext());
@@ -298,9 +323,8 @@ public class buscar extends Fragment implements View.OnClickListener {
 
     public void Busca(){
         for (int i = 0; i < result.size(); i++) {
-            String resultado =  result.get(i).getTipo() + result.get(i).getEndereco();
+           String resultado =  result.get(i).getTipo() + result.get(i).getEndereco();
             Toast.makeText(getActivity(),resultado, Toast.LENGTH_SHORT).show();
-
 
         }
     }

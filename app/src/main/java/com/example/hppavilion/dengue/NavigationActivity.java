@@ -71,7 +71,7 @@ import java.util.Locale;
 public class NavigationActivity extends ActionBarActivity
         implements Mapa.NavigationDrawerCallBack, AddCasos.OnFragmentInteractionListener, Informacoes.OnFragmentInteractionListener,
         CasosAdicionados.OnFragmentInteractionListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, Sair.OnFragmentInteractionListener,
-        Configuracao.OnFragmentInteractionListener, resultadoBusca.OnFragmentInteractionListener, addFocos.OnFragmentInteractionListener
+        Configuracao.OnFragmentInteractionListener, buscar.OnFragmentInteractionListener, addFocos.OnFragmentInteractionListener
 
 
 {
@@ -281,12 +281,10 @@ public class NavigationActivity extends ActionBarActivity
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        //gotoLocation(CG_LAT,CG_LGT, DEFAULTZOM);
                     }
 
 
                 });
-                // getFragmentManager().popBackStack();
                 valor = 1;
                 fm.beginTransaction()
 
@@ -551,12 +549,12 @@ public class NavigationActivity extends ActionBarActivity
             helper2.insertContactt(a);
             // addAdapter.add(a);
 
-            Toast.makeText(this, "Caso registrado!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Case registered!", Toast.LENGTH_SHORT).show();
 
             AddCasos.Nome.setText("");
             AddCasos.Endereço.setText("");
         } catch (IOException e) {
-            Toast.makeText(this, " O caso não pode ser registrado. Conecte-se a internet, e tente novamente.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " The case could not be registered. Connect to the internet, and try again", Toast.LENGTH_SHORT).show();
         }
 
 
@@ -628,9 +626,9 @@ public class NavigationActivity extends ActionBarActivity
     public void onBackPressed() {
         if (valor == 1) {
             new AlertDialog.Builder(this)
-                    .setTitle("Deseja sair do MapAedes?")
-                    .setMessage("Caso saia, você não seja deslogado de sua conta")
-                    .setPositiveButton("SIM",
+                    .setTitle("Wish to logout of MapAedes?")
+                    .setMessage("If you get out, you will be logged out of your account")
+                    .setPositiveButton("YES",
                             new DialogInterface.OnClickListener() {
 
                                 @Override
@@ -642,7 +640,7 @@ public class NavigationActivity extends ActionBarActivity
                                     System.exit(1);
                                 }
                             })
-                    .setNegativeButton("NÃO",
+                    .setNegativeButton("NO",
                             new DialogInterface.OnClickListener() {
 
                                 @Override
@@ -691,7 +689,7 @@ public class NavigationActivity extends ActionBarActivity
 
     public void ADICIONARFOCO(View view) {
 
-        Toast.makeText(this, addFocos.tipo, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, addFocos.tipo, Toast.LENGTH_SHORT).show();
         String teste = addFocos.endereço.getText().toString().toLowerCase();
         Geocoder geocoder;
         List<Address> addresses = null;
@@ -716,7 +714,7 @@ public class NavigationActivity extends ActionBarActivity
         ah.setPlat(lattt);
         ah.setPlng(lnggg);
         helper.insertContactt(ah);
-        Toast.makeText(this, "Foco registrado!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Focus registered!", Toast.LENGTH_SHORT).show();
     }
 
 

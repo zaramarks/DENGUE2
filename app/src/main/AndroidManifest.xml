@@ -84,7 +84,18 @@
             android:theme="@style/AppTheme">
 
         </activity>
+        <activity
+        android:name=".resultadoComMapa"
+        android:label="Map"
+        android:theme="@style/AppTheme">
 
+    </activity>
+        <activity
+            android:name=".resultadoComGrafico"
+            android:label="Graphics"
+            android:theme="@style/AppTheme">
+
+        </activity>
     </application>
 
 </manifest>
