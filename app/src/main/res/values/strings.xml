@@ -81,4 +81,5 @@
     <string name="title_activity_pagina_inicial">Página Inicial</string>
     <string name="SemSenha">Este campo deve ser preenchido</string>
     <string name="title_activity_pagina_inicial2">PaginaInicial2</string>
+    <string name="title_activity_resultado_com_grafico">Grafico</string>
 </resources>

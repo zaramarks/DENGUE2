@@ -136,7 +136,8 @@ public class resultadoBusca extends AppCompatActivity implements GoogleApiClient
     }
 
     public void GRAFICO(View view){
-        Intent myIntent = new Intent(getApplicationContext(),resultadoComGrafico.class);
+        Intent myIntent = new Intent(getApplicationContext(),ResultadoComGrafico.class);
+        myIntent.putStringArrayListExtra("Doencas", Anome);
         startActivity(myIntent);
     }
 }
