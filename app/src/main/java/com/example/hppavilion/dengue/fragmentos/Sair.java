@@ -28,7 +28,7 @@ public class Sair extends Fragment  {
             fa = this;
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
         alertDialog.setTitle("Logout");
-        alertDialog.setMessage("Caso saia, você será deslogado de sua conta");
+        alertDialog.setMessage("If you get out, you will be logged out of your account");
         alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 BancoDeDados bd = new BancoDeDados(getActivity());

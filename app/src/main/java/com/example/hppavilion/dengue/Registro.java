@@ -80,10 +80,9 @@ public class Registro extends AppCompatActivity {
         SpnOpcoes.setAdapter(adpOpcoes);
 
 
-        adpOpcoes.add("Médico");
-        adpOpcoes.add("Agente de saúde");
-        adpOpcoes.add("Agente de posto");
-        adpOpcoes.add("População");
+        adpOpcoes.add("Doctor");
+        adpOpcoes.add("Health Agent");
+        adpOpcoes.add("Population");
 
         Cursor cursor = banco.query("lingua", null, null, null, null, null, null);
         if (cursor.moveToFirst()) {
@@ -130,7 +129,7 @@ public class Registro extends AppCompatActivity {
 
         }
 
-
+        cursor.close();
 
 
     }
@@ -235,7 +234,7 @@ public class Registro extends AppCompatActivity {
             c.setTipo(tipo);
 
             helper.insertContact(c);
-            Toast toast = Toast.makeText(Registro.this, "Vocè foi cadastrado!", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(Registro.this, "You have been registered!", Toast.LENGTH_LONG);
             toast.show();
             Intent intentt = new Intent(Registro.this, MenuDeEntrada.class);
             startActivity(intentt);

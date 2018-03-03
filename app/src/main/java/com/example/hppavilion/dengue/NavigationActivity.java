@@ -181,7 +181,7 @@ public class NavigationActivity extends ActionBarActivity
                         listSliding = new ArrayList<>();
                         listSliding.add(new ItemSlideMenu(R.drawable.place, "   Map "));
                         listSliding.add(new ItemSlideMenu(R.drawable.add, "  Add Cases"));
-                        listSliding.add(new ItemSlideMenu(R.drawable.add, "  Add Focos"));
+                        listSliding.add(new ItemSlideMenu(R.drawable.add, "  Add Focus"));
                         listSliding.add(new ItemSlideMenu(R.drawable.list, "  My Cases Added"));
                         listSliding.add(new ItemSlideMenu(R.drawable.search, "  Search Cases"));
                         listSliding.add(new ItemSlideMenu(R.drawable.info, "  Informations"));
@@ -656,7 +656,7 @@ public class NavigationActivity extends ActionBarActivity
     }
 
     public void Foco(String nome) {
-        if (nome.equals("Foco")) {
+                        if (nome.equals("Foco")) {
             drawCircle(pos);
         }
     }
@@ -677,7 +677,7 @@ public class NavigationActivity extends ActionBarActivity
         circleOptions.strokeColor(Color.BLACK);
 
         // Fill color of the circle
-        circleOptions.fillColor(0x550000);
+        circleOptions.fillColor(0x551000);
 
         // Border width of the circle
         circleOptions.strokeWidth(2);

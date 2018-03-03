@@ -4,15 +4,14 @@ package com.example.hppavilion.dengue.fragmentos;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.CursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.app.Fragment;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import com.example.hppavilion.dengue.BancoDeDados;
 import com.example.hppavilion.dengue.NavigationActivity;
@@ -76,7 +75,7 @@ public class CasosAdicionados extends Fragment  {
                         break;
                     default:
                         doenca.add(R.mipmap.point);
-                        Toast.makeText(getActivity(),pdoenca, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getActivity(),pdoenca, Toast.LENGTH_SHORT).show();
 
                 }
             nome.add(pnome +" - "+pdoenca);

@@ -66,9 +66,9 @@
     </string-array>
 
     <string-array name="pessoas">
-        <item>Agente de saúde</item>
-        <item>Médico</item>
-        <item>População</item>
+        <item>Health Agent</item>
+        <item>Doctor</item>
+        <item>Population</item>
     </string-array>
 
 

@@ -69,6 +69,7 @@ public class MenuDeEntrada extends AppCompatActivity {
 
             }
         }
+        cur.close();
 
 
         Cursor cursor = banco.query("lingua", null, null, null, null, null, null);
@@ -119,14 +120,14 @@ public class MenuDeEntrada extends AppCompatActivity {
 
         }
 
-
+        cursor.close();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
 
 
-       /* SQLiteDatabase bancoo = helper.getReadableDatabase();
+        /*SQLiteDatabase bancoo = helper.getReadableDatabase();
 
         Cursor cursorr = bancoo.query("lingua", null, null, null, null, null, null);
         if (cursor.moveToLast()) {
@@ -139,7 +140,8 @@ public class MenuDeEntrada extends AppCompatActivity {
                 contaa = 1;
             }
             // Toast.makeText(this,"Conta =" + conta, Toast.LENGTH_SHORT).show();
-        }*/
+        }
+        cursorr.close();*/
 
         }
 
@@ -217,7 +219,8 @@ public class MenuDeEntrada extends AppCompatActivity {
                 email = cursor.getString(cursor.getColumnIndex("email"));
                 senha = cursor.getString(cursor.getColumnIndex("senha"));
 
-                Log.e("BD", "entrou no banco de dadaos");
+               //  Toast.makeText(this, email+senha, Toast.LENGTH_SHORT).show();
+
 
                 if (email.equals(email1) && senha.equals(senha1)) {
 
@@ -240,6 +243,7 @@ public class MenuDeEntrada extends AppCompatActivity {
 
             } while (cursor.moveToNext());
 
+            cursor.close();
 
         }
 
