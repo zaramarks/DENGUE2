@@ -60,9 +60,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+import javax.net.ssl.HttpsURLConnection;
 
 //import com.example.hppavilion.dengue.adapter.AddAdapter;
 //import com.example.hppavilion.dengue.model.BancoDeDados2;
@@ -111,7 +114,8 @@ public class NavigationActivity extends ActionBarActivity
     public static LatLng latlng;
     public String emaill, senhaa;
     public static LatLng pos;
-
+    public static String tipo;
+    public double latt, lngg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -521,6 +525,7 @@ public class NavigationActivity extends ActionBarActivity
 
     public void PinarMapa(View v) throws IOException {
         try {
+            tipo = "case";
             PPNOME = AddCasos.Nome.getText().toString();
             //AddCasos.NOME += " - "   +  AddCasos.SpnOpcoes.getSelectedItem();
             // DOENCA=Doenca.getText().toString();
@@ -534,9 +539,9 @@ public class NavigationActivity extends ActionBarActivity
             String locality = add.getLocality();
 
 
-            final double latt = add.getLatitude();
+             latt = add.getLatitude();
 
-            final double lngg = add.getLongitude();
+             lngg = add.getLongitude();
 
             // latlng2 = new LatLng(latt, lngg);
 
@@ -553,12 +558,16 @@ public class NavigationActivity extends ActionBarActivity
 
             AddCasos.Nome.setText("");
             AddCasos.Endereço.setText("");
+
+            postData();
+
         } catch (IOException e) {
             Toast.makeText(this, " The case could not be registered. Connect to the internet, and try again", Toast.LENGTH_SHORT).show();
         }
 
 
     }
+
 
 
     public GoogleApiClient getmGoogleApiClient() {
@@ -690,29 +699,30 @@ public class NavigationActivity extends ActionBarActivity
     public void ADICIONARFOCO(View view) {
 
        // Toast.makeText(this, addFocos.tipo, Toast.LENGTH_SHORT).show();
-        String teste = addFocos.endereço.getText().toString().toLowerCase();
+        PPDOENCA = "foco";
+        PENDERECO = addFocos.endereço.getText().toString().toLowerCase();
         Geocoder geocoder;
         List<Address> addresses = null;
         geocoder = new Geocoder(this, Locale.getDefault());
         List<Address> list = null;
         try {
-            list = geocoder.getFromLocationName(teste, 1);
+            list = geocoder.getFromLocationName(PENDERECO, 1);
         } catch (IOException e1) {
             e1.printStackTrace();
         }
         Address add = list.get(0);
 
-        final double lattt = add.getLatitude();
+         latt = add.getLatitude();
 
-        final double lnggg = add.getLongitude();
+         lngg = add.getLongitude();
         String te = "Foco";
-        Log.v("latitude", String.valueOf(lattt));
+        Log.v("latitude", String.valueOf(latt));
         SQL ah = new SQL();
-        ah.setPnome(te);
-        ah.setPdoenca(te);
-        ah.setPendereco(teste);
-        ah.setPlat(lattt);
-        ah.setPlng(lnggg);
+        ah.setPnome(PPDOENCA);
+        ah.setPdoenca(PPDOENCA);
+        ah.setPendereco(PENDERECO);
+        ah.setPlat(latt);
+        ah.setPlng(lngg);
         helper.insertContactt(ah);
         Toast.makeText(this, "Focus registered!", Toast.LENGTH_SHORT).show();
     }
